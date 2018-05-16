@@ -1,0 +1,34 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "kubeALBIngressControllerPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeRouteTables",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeSubnets",
+                "cloudformation:Delete*",
+                "cloudformation:List*",
+                "cloudformation:Create*",
+                "cloudformation:Describe*",
+                "cloudformation:Get*",
+                "acm:ListCertificates",
+                "acm:DescribeCertificate",
+                "autoscaling:DescribeAutoScalingGroups",
+                "autoscaling:DescribeLoadBalancerTargetGroups",
+                "autoscaling:AttachLoadBalancers",
+                "autoscaling:DetachLoadBalancers",
+                "autoscaling:DetachLoadBalancerTargetGroups",
+                "autoscaling:AttachLoadBalancerTargetGroups",
+                "elasticloadbalancing:*",
+                "elasticloadbalancingv2:*",
+                "iam:ListServerCertificates",
+                "iam:GetServerCertificate"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

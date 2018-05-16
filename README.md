@@ -1,16 +1,14 @@
 ## Setup
 Setting up your Kubernetes Miniconda environment is as follows:
 
-1) Following instructions from `0_CLONE_REPO.md`
-
-2) Run the following command:
+1) Run the following command:
 `source setup_env.sh`
 
 This will setup your isolated working environment.
 ---
 ---
 
-3) Follow instructions from:\
+2) Follow instructions from:\
    - `1_SETUP_IAM_USER-EC2_KEYPAIR.md`
    - `2_SETUP_DNS.md`
    - `3_SETUP_CLUSTER_STATE_STORAGE.md`

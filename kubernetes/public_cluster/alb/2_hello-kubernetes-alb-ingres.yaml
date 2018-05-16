@@ -1,0 +1,32 @@
+# https://github.com/coreos/alb-ingress-controller/blob/master/docs/ingress-resources.md
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: default
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/tags: Environment=test,Team=MyTest
+    # Public subnets for traffic to route via Internet Gateway
+    alb.ingress.kubernetes.io/subnets: 'test-kubernetes-public-dev-public-AZ1, test-kubernetes-public-dev-public-AZ2, test-kubernetes-public-dev-public-AZ3'
+    alb.ingress.kubernetes.io/security-groups: 'sg-123abcd4e'
+    alb.ingress.kubernetes.io/certificate-arn: 'arn:aws:acm:eu-west-1:AWS-ACCOUNT-ID:certificate/REMOVED-FOR-OBVIOUS-REASONS'
+    # alb.ingress.kubernetes.io/healthcheck-port: '80'
+    alb.ingress.kubernetes.io/successCodes: '200,302'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80,"HTTPS": 443}]'
+spec:
+  rules:
+  - host: hello-kubernetes.project1.test.example.com
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: "hello-kubernetes-example-service"
+          servicePort: 8080
+ # - host: test.project1.test.example.com
+ #   http:
+ #     paths:
+ #     - path: /*
+ #       backend:
+ #         serviceName: "test"
+ #         servicePort: 82

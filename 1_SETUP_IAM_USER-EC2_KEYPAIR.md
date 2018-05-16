@@ -93,5 +93,8 @@ ls -la ./ec2-keypairs/
 
 `KEYPAIR=$(cat ./ec2-keypairs/${AWS_REGION}-mylocal-test-kops_id_rsa.pub)`
 
-`aws --profile $AWS_PROFILE --region $AWS_REGION ec2 import-key-pair --key-name ${AWS_REGION}-mylocal-test-kops_id_rsa.pub --public-key-material "${KEYPAIR}"`
+`aws --profile $AWS_PROFILE --region $AWS_REGION ec2 import-key-pair \
+        --key-name ${AWS_REGION}-mylocal-test-kops_id_rsa.pub \
+        --public-key-material "${KEYPAIR}"`
+
 `aws --profile $AWS_PROFILE --region $AWS_REGION ec2 describe-key-pairs --output table`

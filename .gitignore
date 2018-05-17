@@ -1,0 +1,4 @@
+.miniconda
+activate.sh
+deactivate.sh
+*.retry

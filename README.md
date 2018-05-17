@@ -1,3 +1,6 @@
+So this is my github repository on my own testing on AWS for getting Kubernetes provisioned on AWS during my own time and works for me.
+
+
 ## Setup
 Setting up your Kubernetes Miniconda environment is as follows:
 

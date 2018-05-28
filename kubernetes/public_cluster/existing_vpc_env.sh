@@ -1,4 +1,4 @@
-# Kubernetes 'Web Development' Public Cluster for an existing VPC
+# Kubernetes 'My Test Cluster' Public Cluster for an existing VPC
 
 # source this file first
 
